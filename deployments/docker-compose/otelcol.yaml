@@ -41,7 +41,7 @@ service:
   extensions: [health_check]
   pipelines:
     traces:
-      receivers: [jaeger, otlp, zipkin]
+      receivers: [jaeger, otlp]
       processors: [memory_limiter]
       exporters: [logging, otlphttp]
     metrics:
